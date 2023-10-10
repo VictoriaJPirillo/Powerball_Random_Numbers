@@ -1,0 +1,38 @@
+### POWERBALL RANDOM NUMBER GENERATOR###
+# This one will generate 5 picks:
+
+import random
+
+def generate_powerball_numbers():
+    # Generate 5 random numbers between 1 and 69 (inclusive)
+    white_balls = random.sample(range(1, 70), 5)
+    
+    # Generate a random Powerball number between 1 and 26 (inclusive)
+    powerball = random.randint(1, 26)
+    
+    return sorted(white_balls) + [powerball]
+
+if __name__ == "__main__":
+    for _ in range(5):  # You can change the number of sets of numbers you want to generate
+        numbers = generate_powerball_numbers()
+        print("Powerball Numbers:", numbers[:-1])
+        print("Powerball:", numbers[-1])
+
+# This one will generate 3 picks:
+
+import random
+
+def generate_powerball_numbers():
+    # Generate 5 numbers between 1 and 69 (inclusive)
+    white_balls = random.sample(range(1, 70), 5)
+    
+    # Generate a random Powerball numbers between 1 and 26 (inclusive)
+    powerball = random.randint(1, 26)
+    
+    return sorted(white_balls) + [powerball]
+
+if __name__ == "__main__":
+    for _ in range(3):  # You can change the number of sets of numbers you want to generate
+        numbers = generate_powerball_numbers()
+        print("Powerball Numbers:", numbers[:-1])
+        print("Powerball:", numbers[-1])
